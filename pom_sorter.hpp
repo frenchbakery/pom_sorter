@@ -13,7 +13,7 @@
 
 #include <kipr/servo.hpp>
 
-class pom_sorter
+class PomSorter
 {
 protected:
     // Hardware access
@@ -21,7 +21,7 @@ protected:
 
 public:
 
-    pom_sorter(int sp);
+    PomSorter(int sp);
 
     void initialize();
     void terminate();
@@ -36,5 +36,5 @@ public:
 
 namespace go
 {
-    extern ::pom_sorter pom_sorter;
+    extern ::PomSorter pom_sorter;
 };

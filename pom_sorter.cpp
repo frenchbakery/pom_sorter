@@ -15,8 +15,8 @@
 
 #include "pom_sorter.hpp"
 
-pom_sorter go::pom_sorter(0);
-using c_t = pom_sorter::pos_t;
+PomSorter go::pom_sorter(0);
+using c_t = PomSorter::pos_t;
 
 
 // servo position defs
@@ -27,12 +27,12 @@ using c_t = pom_sorter::pos_t;
 
 
 
-pom_sorter::pom_sorter(int sp)
+PomSorter::PomSorter(int sp)
     : selector_servo(sp)
 {
 }
 
-void pom_sorter::initialize()
+void PomSorter::initialize()
 {
     selector_servo.enable();
     selector_servo.setPosition(POSITION_CENTER);
@@ -40,7 +40,7 @@ void pom_sorter::initialize()
     selector_servo.disable();
 }
 
-void pom_sorter::terminate()
+void PomSorter::terminate()
 {
     selector_servo.enable();
     selector_servo.setPosition(POSITION_CENTER);
@@ -48,7 +48,7 @@ void pom_sorter::terminate()
     selector_servo.disable();
 }
 
-void pom_sorter::setColorSelector(pom_sorter::pos_t col)
+void PomSorter::setColorSelector(PomSorter::pos_t col)
 {
     if (col == c_t::green)
     {
