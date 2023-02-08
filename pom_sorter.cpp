@@ -55,7 +55,7 @@ void PomSorter::setColorSelector(PomSorter::pos_t col)
         std::cout << "selecting green" << std::endl;
         selector_servo.enable();
         selector_servo.setPosition(POSITION_GREEN);
-        msleep(200);
+        msleep(50);
         selector_servo.disable();
     }
     else if (col == c_t::red)
@@ -63,7 +63,7 @@ void PomSorter::setColorSelector(PomSorter::pos_t col)
         std::cout << "selecting red" << std::endl;
         selector_servo.enable();
         selector_servo.setPosition(POSITION_RED);
-        msleep(200);
+        msleep(50);
         selector_servo.disable();
     }
 }
