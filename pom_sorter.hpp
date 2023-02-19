@@ -19,6 +19,15 @@ protected:
     // Hardware access
     Servo selector_servo;
 
+    /**
+     * @brief moves the servo to the specified position in the
+     * specified time duration
+     * 
+     * @param target_pos target position
+     * @param time time in ms it should take
+     */
+    void moveServoToIn(int target_pos, int time);
+
 public:
 
     PomSorter(int sp);
